@@ -153,7 +153,7 @@ print(model.summary())
 batch_size = 64
 epochs = 100
 
-history = model.fit(X_train, y_train, validation_data = (X_test , y_test) ,callbacks=[lr_reduce,checkpoint] ,
+history = model.fit(X_train, y_train, validation_data = (X_test, y_test), callbacks=[lr_reduce, checkpoint],
           epochs=epochs)
 
 
@@ -189,6 +189,6 @@ from mlxtend.plotting import plot_confusion_matrix
 fig, ax = plot_confusion_matrix(conf_mat=CM ,  figsize=(5, 5))
 plt.show()
 
-370 / (370 + 62)
-370 / (370 + 20)
-2*0.9487*0.8564 / (0.9487 + 0.8564)
+print(370 / (370 + 62))
+print(370 / (370 + 20))
+print(2*0.9487*0.8564 / (0.9487 + 0.8564))
