@@ -1,0 +1,8 @@
+keras==2.3.1
+numpy==1.17.2
+skimage==0.15.0
+mlxtend==0.17.0
+opencv-python==4.1.2
+tqdm==4.36.1
+scipy==1.4.1
+pandas==0.25.1

@@ -3,15 +3,9 @@ from keras.models import Sequential
 from keras.layers import Conv2D, MaxPooling2D
 from keras.layers import Activation, Dropout, Flatten, Dense
 from keras import backend as K
-
 import os
-import numpy as np
-import pandas as np
 
-import matplotlib.pyplot as plt
-#get_ipython().run_line_magic('matplotlib', 'inline')
-
-
+path = os.getcwd()
 print(os.listdir("/Users/ashwini/Desktop/chest_xray/chest_xray"))
 print(os.listdir("/Users/ashwini/Desktop/chest_xray/chest_xray/train"))
 print(os.listdir("/Users/ashwini/Desktop/chest_xray/chest_xray/train/"))
