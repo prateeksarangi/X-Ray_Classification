@@ -1,21 +1,184 @@
 <!DOCTYPE html>
-<html>
+<!-- saved from url=(0036)https://s.bootsnipp.com/iframe/xpQyW -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Jquery Image Picker - Bootsnipp.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./bootstrap.min(1).css" rel="stylesheet" id="bootstrap-css">
+    <style type="text/css">
+    .img-upload-btn { 
+    position: relative; 
+    overflow: hidden; 
+    padding-top: 95%;
+} 
+
+.img-upload-btn input[type=file] { 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    min-width: 100%; 
+    min-height: 100%; 
+    font-size: 100px; 
+    text-align: right; 
+    filter: alpha(opacity=0); 
+    opacity: 0; 
+    outline: none; 
+    background: white; 
+    cursor: inherit; 
+    display: block; 
+} 
+
+.img-upload-btn i { 
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    top: 50%;
+    left: 50%;
+    margin-top: -8px;
+    margin-left: -8px;
+}
+
+.btn-radio {
+    position: relative; 
+    overflow: hidden; 
+}
+
+.btn-radio input[type=radio] { 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    min-width: 100%; 
+    min-height: 100%; 
+    font-size: 100px; 
+    text-align: right; 
+    filter: alpha(opacity=0); 
+    opacity: 0; 
+    outline: none; 
+    background: white; 
+    cursor: inherit; 
+    display: block; 
+}    </style>
+    <script src="./jquery-1.11.1.min.js"></script>
+    <script src="./bootstrap.min(2).js"></script>
+    <script type="text/javascript">
+        window.alert = function(){};
+        var defaultCSS = document.getElementById('bootstrap-css');
+        function changeCSS(css){
+            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
+            else $('head > link').filter(':first').replaceWith(defaultCSS); 
+        }
+        $( document ).ready(function() {
+          var iframe_height = parseInt($('html').height()); 
+          window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
+        });
+    </script>
+</head>
 <body>
-	<center>
-		<br>
-	    Select an X-ray image:
-	    <br>
-	    <br>
-	    <input type="file" name="fileToPredict" id="fileToPredict">
-	    <br>
-	    <br>
-	    <input type="submit" value="Predict" name="submit">
-	    <br>
-	    <br>
-	    <br>
-		Annotation:
-		<br>
-		<textarea type="text" name="annotation"></textarea>
-	</center>
-</body>
-</html>
+<div class="container"> 
+    <div class="col-lg-12 col-sm-8 col-xs-6"> 
+        <form role="form"> 
+            <h3>Pick x-ray image</h3> 
+            <div class="row">
+                <div class="form-group col-lg-4 col-sm-6 col-xs-6"> 
+                    <div class="img-picker"><div class="form-control btn btn-default btn-block img-upload-btn"><i class="glyphicon glyphicon-plus"></i><input type="file" name="images"></div></div>
+                </div>
+            </div>
+
+            <div>
+                <h3>Annotation</h3>
+                <div> 
+                    <textarea placeholder="Type here" rows="5" cols="50"></textarea>
+                </div>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary" onclick="btnclick()">Predict</button>
+        </form> 
+    </div> 
+</div>  <script type="text/javascript">
+    (function ( $ ) {
+ 
+    $.fn.imagePicker = function( options ) {
+        
+        // Define plugin options
+        var settings = $.extend({
+            // Input name attribute
+            name: "",
+            // Classes for styling the input
+            class: "form-control btn btn-default btn-block",
+            // Icon which displays in center of input
+            icon: "glyphicon glyphicon-plus"
+        }, options );
+        
+        // Create an input inside each matched element
+        return this.each(function() {
+            $(this).html(create_btn(this, settings));
+        });
+ 
+    };
+ 
+    // Private function for creating the input element
+    function create_btn(that, settings) {
+        // The input icon element
+        var picker_btn_icon = $('<i class="'+settings.icon+'"></i>');
+        
+        // The actual file input which stays hidden
+        var picker_btn_input = $('<input type="file" name="'+settings.name+'" />');
+        
+        // The actual element displayed
+        var picker_btn = $('<div class="'+settings.class+' img-upload-btn"></div>')
+            .append(picker_btn_icon)
+            .append(picker_btn_input);
+            
+        // File load listener
+        picker_btn_input.change(function() {
+            if ($(this).prop('files')[0]) {
+                // Use FileReader to get file
+                var reader = new FileReader();
+                
+                // Create a preview once image has loaded
+                reader.onload = function(e) {
+                    var preview = create_preview(that, e.target.result, settings);
+                    $(that).html(preview);
+                }
+                
+                // Load image
+                reader.readAsDataURL(picker_btn_input.prop('files')[0]);
+            }                
+        });
+
+        return picker_btn
+    };
+    
+    // Private function for creating a preview element
+    function create_preview(that, src, settings) {
+        
+            // The preview image
+            var picker_preview_image = $('<img src="'+src+'" class="img-responsive img-rounded" />');
+            
+            // The remove image button
+            var picker_preview_remove = $('<button class="btn btn-link"><small>Remove</small></button>');
+            
+            // The preview element
+            var picker_preview = $('<div class="text-center"></div>')
+                .append(picker_preview_image)
+                .append(picker_preview_remove);
+
+            // Remove image listener
+            picker_preview_remove.click(function() {
+                var btn = create_btn(that, settings);
+                $(that).html(btn);
+            });
+            
+            return picker_preview;
+    };
+    
+}( jQuery ));
+
+$(document).ready(function() {
+    $('.img-picker').imagePicker({name: 'images'});
+})  </script>
+
+
+</body></html>
