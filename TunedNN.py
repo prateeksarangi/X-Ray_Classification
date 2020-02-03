@@ -18,8 +18,8 @@ test_data_dir = '/Users/ashwini/Desktop/chest_xray/chest_xray/test'
 
 nb_train_samples = 5217
 nb_validation_samples = 17
-epochs = 1
-batch_size = 128
+epochs = 200
+batch_size = 4
 
 if K.image_data_format() == 'channels_first':
     input_shape = (3, img_width, img_height)
