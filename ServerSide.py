@@ -11,7 +11,7 @@ img_width, img_height = 150, 150
 model.compile(loss='binary_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
 
 img = image.load_img(
-    "/Users/ashwini/Desktop/chest_xray/chest_xray/test/PNEUMONIA/person1616_virus_2802.jpeg",
+    "/home/ps/chest_xray/chest_xray/test/PNEUMONIA/person1616_virus_2802.jpeg",
                 target_size = (img_width, img_height))
 
 x = image.img_to_array(img)

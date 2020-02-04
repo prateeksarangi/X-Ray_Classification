@@ -6,15 +6,15 @@ from keras import backend as K
 import os
 
 path = os.getcwd()
-print(os.listdir("/Users/ashwini/Desktop/chest_xray/chest_xray"))
-print(os.listdir("/Users/ashwini/Desktop/chest_xray/chest_xray/train"))
-print(os.listdir("/Users/ashwini/Desktop/chest_xray/chest_xray/train/"))
+print(os.listdir("/home/ps/chest_xray/chest_xray"))
+print(os.listdir("/home/ps/chest_xray/chest_xray/train"))
+print(os.listdir("/home/ps/chest_xray/chest_xray/train/"))
 
 img_width, img_height = 150, 150
 
-train_data_dir = '/Users/ashwini/Desktop/chest_xray/chest_xray/train'
-validation_data_dir = '/Users/ashwini/Desktop/chest_xray/chest_xray/val'
-test_data_dir = '/Users/ashwini/Desktop/chest_xray/chest_xray/test'
+train_data_dir = '/home/ps/chest_xray/chest_xray/train'
+validation_data_dir = '/home/ps/chest_xray/chest_xray/val'
+test_data_dir = '/home/ps/chest_xray/chest_xray/test'
 
 nb_train_samples = 5217
 nb_validation_samples = 17
