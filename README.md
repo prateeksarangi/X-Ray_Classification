@@ -9,6 +9,8 @@ cd X-Ray_Classification-CDAC
 
 pip install virtualenv
 
+virtualenv env
+
 python3 -m venv env
 
 source env/bin/activate
