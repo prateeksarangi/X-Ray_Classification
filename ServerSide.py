@@ -3,9 +3,9 @@ from keras.preprocessing import image
 import numpy as np
 import os
 
-with open("model.json") as json_file:
+with open("Model/model.json") as json_file:
     model = model_from_json(json_file.read())
-    model.load_weights("first_try.h5")
+    model.load_weights("Model/weight.h5")
 
 img_width, img_height = 150, 150
 

@@ -6,20 +6,27 @@ from keras import backend as K
 import os
 
 path = os.getcwd()
+
 print(os.listdir("/Users/ashwini/Desktop/chest_xray/chest_xray"))
+
 print(os.listdir("/Users/ashwini/Desktop/chest_xray/chest_xray/train"))
+
 print(os.listdir("/Users/ashwini/Desktop/chest_xray/chest_xray/train/"))
+
 
 img_width, img_height = 150, 150
 
 train_data_dir = '/Users/ashwini/Desktop/chest_xray/chest_xray/train'
+
 validation_data_dir = '/Users/ashwini/Desktop/chest_xray/chest_xray/val'
+
 test_data_dir = '/Users/ashwini/Desktop/chest_xray/chest_xray/test'
+
 
 nb_train_samples = 5217
 nb_validation_samples = 17
-epochs = 1
-batch_size = 128
+epochs = 200
+batch_size = 16
 
 if K.image_data_format() == 'channels_first':
     input_shape = (3, img_width, img_height)
@@ -80,11 +87,11 @@ model.fit_generator( train_generator,
 
 #Save the model file
 model_json = model.to_json()
-with open("model.json", "w") as json_file:
+with open("Model/model.json", "w") as json_file:
     json_file.write(model_json)
 
 #Save the weight files
-model.save_weights('weight.h5')
+model.save_weights('Model/weight.h5')
 
 scores = model.evaluate_generator(test_generator)
 print("\n%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
