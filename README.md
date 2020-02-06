@@ -31,3 +31,6 @@ Running the webapp backend program:-
 Running the webapp frontend program:-
 
 *python exec.py*
+
+
+After executing exec.py, open **localhost:5000** in web browser.
