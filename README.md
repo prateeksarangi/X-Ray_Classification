@@ -14,6 +14,8 @@ Before running program download the dataset from the link and place the **chest_
 
 *pip install virtualenv*
 
+*virtualenv env*
+
 *python3 -m venv env*
 
 *source env/bin/activate*
