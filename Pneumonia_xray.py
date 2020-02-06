@@ -7,11 +7,11 @@ from tqdm import tqdm
 import scipy
 import skimage
 from skimage.transform import resize
-print(os.listdir("/Users/ashwini/Desktop/chest_xray/chest_xray"))
-print(os.listdir("/Users/ashwini/Desktop/chest_xray/chest_xray/train/"))
+print(os.listdir(os.getcwd()+"/chest_xray"))
+print(os.listdir(os.getcwd()+"/chest_xray/train/"))
 
-TRAIN_DIR = "/Users/ashwini/Desktop/chest_xray/chest_xray/train/"
-TEST_DIR =  "/Users/ashwini/Desktop/chest_xray/chest_xray/test/"
+TRAIN_DIR = os.getcwd()+"/chest_xray/train/"
+TEST_DIR =  os.getcwd()+"/chest_xray/test/"
 
 def get_label(Dir):
     for nextdir in os.listdir(Dir):
