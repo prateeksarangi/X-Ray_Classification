@@ -7,6 +7,7 @@ Training dataset on local system
 
 Before running program download the dataset from the link and place the **chest_xray** folder, containing **train**, **test** and **val** folders, inside **X-Ray_Classification-CDAC** folder.
 
+
 *cd X-Ray_Classification-CDAC*
 
 *pip install virtualenv*
@@ -21,8 +22,12 @@ Before running program download the dataset from the link and place the **chest_
 
 *python TunedNN.py*
 
+
 Running the webapp backend program:-
+
 *python ServerSide.py*
 
+
 Running the webapp frontend program:-
+
 *python exec.py*
