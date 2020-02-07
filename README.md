@@ -1,36 +1,40 @@
 # X-Ray_Classification-CDAC
 
-Dataset:- https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia/download
+X-Ray classification deals with identifying the disease i.e. pneumonia in a person.The objective of this project is to make the work of medical professionals easier  and quicker than earlier to detect pneumonia in a person's body. To fulfill the objective of this project, we need the datasets so as to train the model about the differences between normal person and a person having pneumonia.
 
-Training dataset on local system
-*git clone https://github.com/prateeksarangi/X-Ray_Classification-CDAC/*
+#dataset for project: 
 
-Before running program download the dataset from the link and place the **chest_xray** folder, containing **train**, **test** and **val** folders, inside **X-Ray_Classification-CDAC** folder.
+link- https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia/download
 
+Before running program download the dataset from the link and place the chest_xray folder, containing train, test and val folders, inside X-Ray_Classification-CDAC folder.
 
-*cd X-Ray_Classification-CDAC*
+#datset for project: 
 
-*pip install virtualenv*
+link- https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia/download
 
-*virtualenv env*
+#installation process:
 
-*python3 -m venv env*
+git clone https://github.com/prateeksarangi/X-Ray_Classification-CDAC/
 
-*source env/bin/activate*
+cd X-Ray_Classification-CDAC
 
-*pip install -r requirements.txt*
+pip install virtualenv
 
-*python TunedNN.py*
+source bin/activate
 
+pip install -r requirements.txt
 
-Running the webapp backend program:-
+#Training dataset on local system: 
 
-*python ServerSide.py*
+python TundNN.py
 
+#Running the webapp backend program:-
 
-Running the webapp frontend program:-
+python ServerSide.py
 
-*python exec.py*
+#Running the webapp frontend program:-
 
+python exec.py
 
-After executing exec.py, open **localhost:5000** in web browser.
+After executing exec.py, open localhost:5000 in web browser.
+
