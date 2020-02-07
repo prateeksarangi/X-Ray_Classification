@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+<!-- saved from url=(0036)https://s.bootsnipp.com/iframe/xpQyW -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="robots" content="noindex, nofollow">
 
     <title>Jquery Image Picker - Bootsnipp.com</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{{ url_for('static',filename='main.css') }}" rel="stylesheet" id="bootstrap-css">
+    <link href="./bootstrap.min(1).css" rel="stylesheet" id="bootstrap-css">
     <style type="text/css">
-    .img-upload-btn {
+    .img-upload-btn { 
     position: relative; 
     overflow: hidden; 
     padding-top: 95%;
@@ -59,8 +60,8 @@
     cursor: inherit; 
     display: block; 
 }    </style>
-    <script src="./jquery-1.11.1.min.js"></script>
-    <script src="./bootstrap.min(2).js"></script>
+    <script src="./jquery-1.11.1.min.js.download"></script>
+    <script src="./bootstrap.min.js(1).download"></script>
     <script type="text/javascript">
         window.alert = function(){};
         var defaultCSS = document.getElementById('bootstrap-css');
@@ -75,8 +76,7 @@
     </script>
 </head>
 <body>
-<div class="container">
-
+    <div class="container"> 
     <div class="col-lg-12 col-sm-8 col-xs-6">
         <div style="float: left">
             <h4 style="float: left">Patient details</h4> <br>
@@ -87,24 +87,20 @@
             <textarea placeholder="Type here" rows="5" cols="30" style="float: right"></textarea>
         </div>
     </div>
-    <div class="col-lg-12 col-sm-8 col-xs-6">
-        <form role="form" method="post" enctype="multipart/form-data">
+    <div class="col-lg-12 col-sm-8 col-xs-6"> 
+        <form role="form" method="post" enctype="multipart/form-data"> 
             <h3>Pick x-ray image</h3> 
             <div class="row">
-                <div class="form-group col-lg-4 col-sm-6 col-xs-6"> 
+                <div class="form-group col-sm-2 col-lg-4"> 
                     <div class="img-picker"><div class="form-control btn btn-default btn-block img-upload-btn"><i class="glyphicon glyphicon-plus"></i><input type="file" name="inputFile"></div></div>
-                </div>
+                </div> 
                 <div style="float: right">
                     {% if predict %}
                     <label>{{predict}}</label>
                     {% endif %}
                 </div>
             </div>
-
-            <button type="submit" value="Upload" class="btn btn-primary">Predict</button>
-
-            <br>
-
+           <button type="submit" value="Upload" class="btn btn-primary">Predict</button>
             <div>
                 <h3>Annotation</h3>
                 <div>
@@ -196,7 +192,7 @@
 }( jQuery ));
 
 $(document).ready(function() {
-    $('.img-picker').imagePicker({name: 'images'});
+    $('.img-picker').imagePicker({name: 'inputFile'});
 })  </script>
 
 
