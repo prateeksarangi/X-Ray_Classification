@@ -9,25 +9,23 @@ def predict_class(path):
         model.load_weights("Model/weight.h5")
 
     img_width, img_height = 150, 150
-
-    model.compile(loss='binary_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
-
     img = image.load_img(path, target_size = (img_width, img_height))
 
     x = image.img_to_array(img)
     x = np.expand_dims(x, axis = 0)
 
     images = np.vstack([x])
-    classes = model.predict(images, batch_size = 1)
+    classes = model.predict(images, batch_size = 16)
 
-    #print(classes)
     return classes
 
-c = predict_class(os.getcwd()+'/chest_xray/chest_xray/train/NORMAL/IM-0137-0001.jpeg')
+
+c = predict_class(os.getcwd()+'/chest_xray/chest_xray/train/NORMAL/IM-0149-0001.jpeg')
 print(c[0][0])
 
 
-
+c = predict_class(os.getcwd()+'/chest_xray/chest_xray/train/PNEUMONIA/person1000_virus_1681.jpeg')
+print(c[0][0])
 
 
 
