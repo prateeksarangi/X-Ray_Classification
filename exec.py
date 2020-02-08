@@ -19,13 +19,12 @@ class User(db.Model):
 class Doctor(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     dname = db.Column(db.String(20), nullable=False)
-    dno = db.Column(db.Integer, nullable=False)
     did = db.Column(db.Integer, nullable=False)
+    dno = db.Column(db.Integer, nullable=False)
 
     def __repr__(self):
-        return f"Doctor('{self.dname}', '{self.dno}', '{self.did}')"
+        return f"Doctor('{self.dname}', '{self.did}', '{self.dno}')"
 db.create_all()
-
 
 @app.route('/')
 def index():
@@ -34,22 +33,23 @@ def index():
 @app.route('/', methods = ['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
-    	file = request.files['images']
-    	path = os.getcwd()+'/static/profile_pics/'+file.filename
-    	file.save(path)
-    	print('PATH: {}'.format(path))
-    	print(request.form['name'])
-    	image_file = url_for('static', filename='profile_pics/' + file.filename)
-    	output=predict_class(path)
-    	if output[0][0]==1:
-    		labelans="Normal"
-    	else:
-    		labelans="Pneumonia"
-    	user1 = User(pname=request.form['name'], gender=request.form['gender'], age=request.form['age'], result=labelans)
-    	db.session.add(user1)
-    	db.session.commit()
-    	uin=User.query.filter_by(pname=request.form['name']).first()
-    	return render_template('index.html',predict=labelans,image_file=image_file,pname=uin.pname,gender=uin.gender,age=uin.age)
+        file = request.files['images']
+        path = os.getcwd()+'/static/tempdata/'+file.filename
+        file.save(path)
+        image_file = url_for('static', filename='tempdata/' + file.filename)
+        output = predict_class(path)
+        if output[0][0] == 1:
+            labelans = "Normal"
+        else:
+            labelans = "Pneumonia"
+        user1 = User(pname=request.form['name'], gender=request.form['gender'], age=request.form['age'], result=labelans)
+        db.session.add(user1)
+        db.session.commit()
+        doctor1 = Doctor(dname=request.form['d_name'], did=request.form['d_id'], dno=request.form['d_mob'])
+        db.session.add(doctor1)
+        db.session.commit()
+        return render_template('index.html',predict=labelans,image_file=image_file,pname=user1.pname,gender=user1.gender,age=user1.age,dname=doctor1.dname,dno=doctor1.dno,did=doctor1.did)
+
 if __name__ == '__main__':
-	app.run(debug=True)
+    app.run(debug=True)
 
