@@ -1,7 +1,7 @@
 import os
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, render_template, request, url_for, flash
-#from ServerSide import predict_class
+from ServerSide import predict_class
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
@@ -41,8 +41,8 @@ def upload_file():
     	print('PATH: {}'.format(path))
     	print(request.form['name'])
     	image_file = url_for('static', filename='profile_pics/' + file.filename)
-    	#output=predict_class(path)
-    	if output[0][0]==1:
+    	output=predict_class(path)
+    	if output[0][0]==0:
     		labelans="Normal"
     	else:
     		labelans="Pneumonia"
