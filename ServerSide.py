@@ -1,4 +1,4 @@
-from tensorflow.keras.models import model_from_json
+from keras.models import model_from_json
 from keras.preprocessing import image
 import numpy as np
 import os
