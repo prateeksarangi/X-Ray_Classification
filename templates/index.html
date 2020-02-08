@@ -153,10 +153,21 @@
                     <div class="form_main" style="float: left;">
                             <h4 class="heading"><strong>Patient </strong> Details <span></span></h4>
                             <div class="form">
-                            
-                                <input type="text" required="" placeholder="Please input patient's Name" value="" name="name" class="txt">
+                                {% if pname %}
+                                <input type="text" required="" placeholder="{{ pname }}" value="" name="name" class="txt">
+                                {% else %}
+                                <input type="text" required="" placeholder="please input patients name" value="" name="name" class="txt">
+                                {% endif %}
+                                {% if gender %}
+                                <input type="text" required="" placeholder="{{gender}}" value="" name="gender" class="txt">
+                                {% else %}
                                 <input type="text" required="" placeholder="Please input patient's Gender" value="" name="gender" class="txt">
+                                {% endif %}
+                                {% if age %}
+                                <input type="text" required="" placeholder="{{age}}" value="" name="age" class="txt">
+                                {% else %}
                                 <input type="text" required="" placeholder="Please input patient's Age" value="" name="age" class="txt">
+                                {% endif %}
                                 
                         </div>
                       
