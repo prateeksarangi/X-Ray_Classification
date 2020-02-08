@@ -31,7 +31,7 @@ Before running program download the dataset from the link and place the *chest_x
 
 
 
-## Running the webapp frontend program:-
+## Running the webapp:-
 
 	python exec.py
 
