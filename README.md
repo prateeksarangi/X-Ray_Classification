@@ -1,4 +1,4 @@
-# X-Ray_Classification-CDAC
+## X-Ray_Classification-CDAC
 
 X-Ray classification deals with identifying the disease i.e. pneumonia in a person.The objective of this project is to make the work of medical professionals easier  and quicker than earlier to detect pneumonia in a person's body. To fulfill the objective of this project, we need the datasets so as to train the model about the differences between normal person and a person having pneumonia.
 
