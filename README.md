@@ -9,30 +9,29 @@ link- https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia/download
 Before running program download the dataset from the link and place the *chest_xray* folder, containing *train*, *test* and *val* folders, inside *X-Ray_Classification-CDAC* folder.
 
 ## Install process:
-
 	git clone https://github.com/prateeksarangi/X-Ray_Classification-CDAC/
 	cd X-Ray_Classification-CDAC
 	
+## Installing MySQL server in the local system to store data of the patients and doctor on the database:
+	sudo apt install mysql-server -y
+	curl -OL https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
+	sudo dpkg -i mysql-apt-config*
+	sudo apt update
+	sudo apt install mysql-server -y
+	sudo mysql_secure_installation
+	
 ## Create and activate virtual environment:
-
 	pip install virtualenv
 	virtualenv <env_name>
 	source <env_name>/bin/activate
 	
 ## Installing required packages:
-
 	pip install -r requirements.txt
 
 ## Training dataset on local system: 
-
 	python TunedNN.py
 
-
-
-
-
 ## Running the webapp:-
-
 	python exec.py
 
 After executing exec.py, open *localhost:5000* in web browser.
