@@ -18,10 +18,16 @@ def predict_class(path):
     x = np.expand_dims(x, axis = 0)
 
     images = np.vstack([x])
-    classes = model.predict_classes(images, batch_size = 1)
+    classes = model.predict(images, batch_size = 1)
 
     #print(classes)
     return classes
 
-c = predict_class(os.getcwd()+'/chest_xray/test/PNEUMONIA/person100_bacteria_477.jpeg')
+c = predict_class(os.getcwd()+'/chest_xray/chest_xray/train/NORMAL/IM-0137-0001.jpeg')
 print(c[0][0])
+
+
+
+
+
+

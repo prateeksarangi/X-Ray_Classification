@@ -26,7 +26,7 @@ class Doctor(db.Model):
         return f"Doctor('{self.dname}', '{self.dno}', '{self.did}')"
 db.create_all()
 
-output=[[1]]
+#output=[[1]]
 
 @app.route('/')
 def index():
@@ -42,7 +42,7 @@ def upload_file():
     	print(request.form['name'])
     	image_file = url_for('static', filename='profile_pics/' + file.filename)
     	output=predict_class(path)
-    	if output[0][0]==0:
+    	if output[0][0]==1:
     		labelans="Normal"
     	else:
     		labelans="Pneumonia"
