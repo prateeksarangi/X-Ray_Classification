@@ -12,8 +12,15 @@ Before running program download the dataset from the link and place the *chest_x
 
 	git clone https://github.com/prateeksarangi/X-Ray_Classification-CDAC/
 	cd X-Ray_Classification-CDAC
+	
+## Create and activate virtual environment:
+
 	pip install virtualenv
-	source bin/activate
+	virtualenv *env_name*
+	source *env_name*/bin/activate
+	
+## Installing required packages:
+
 	pip install -r requirements.txt
 
 ## Training dataset on local system: 
