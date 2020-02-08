@@ -19,13 +19,11 @@ def predict_class(path):
 
     return classes
 
-
+'''
 c = predict_class(os.getcwd()+'/chest_xray/chest_xray/train/NORMAL/IM-0149-0001.jpeg')
 print(c[0][0])
 
 
 c = predict_class(os.getcwd()+'/chest_xray/chest_xray/train/PNEUMONIA/person1000_virus_1681.jpeg')
 print(c[0][0])
-
-
-
+'''

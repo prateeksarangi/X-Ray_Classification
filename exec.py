@@ -26,7 +26,6 @@ class Doctor(db.Model):
         return f"Doctor('{self.dname}', '{self.dno}', '{self.did}')"
 db.create_all()
 
-#output=[[1]]
 
 @app.route('/')
 def index():
