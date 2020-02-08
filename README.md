@@ -18,7 +18,7 @@ Before running program download the dataset from the link and place the *chest_x
 
 ## Training dataset on local system: 
 
-	python TundNN.py
+	python TunedNN.py
 
 ## Running the webapp backend program:-
 
