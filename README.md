@@ -27,9 +27,9 @@ Before running program download the dataset from the link and place the *chest_x
 
 	python TunedNN.py
 
-## Running the webapp backend program:-
 
-	python ServerSide.py
+
+
 
 ## Running the webapp frontend program:-
 
