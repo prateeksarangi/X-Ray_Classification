@@ -27,6 +27,7 @@ class Doctor(db.Model):
 db.create_all()
 
 output=[[1]]
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -52,3 +53,4 @@ def upload_file():
     	return render_template('index.html',predict=labelans,image_file=image_file,pname=uin.pname,gender=uin.gender,age=uin.age)
 if __name__ == '__main__':
 	app.run(debug=True)
+

@@ -1,1 +1,0 @@
-This is a folder to store the uploaded image files.
