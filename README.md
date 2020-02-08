@@ -8,7 +8,7 @@ link- https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia/download
 
 Before running program download the dataset from the link and place the *chest_xray* folder, containing *train*, *test* and *val* folders, inside *X-Ray_Classification-CDAC* folder.
 
-## Installation process:
+## Install process:
 
 	git clone https://github.com/prateeksarangi/X-Ray_Classification-CDAC/
 	cd X-Ray_Classification-CDAC
@@ -16,8 +16,8 @@ Before running program download the dataset from the link and place the *chest_x
 ## Create and activate virtual environment:
 
 	pip install virtualenv
-	virtualenv *env_name*
-	source *env_name*/bin/activate
+	virtualenv <env_name>
+	source <env_name>/bin/activate
 	
 ## Installing required packages:
 
