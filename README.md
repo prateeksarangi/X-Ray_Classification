@@ -23,6 +23,9 @@ Before running program download the dataset from the link and place the *chest_x
 ## Training dataset on local system: 
 	python TunedNN.py
 
+## Runnning the prediction model:
+	python ServerSide.py
+
 ## Running the webapp:-
 	python exec.py
 
