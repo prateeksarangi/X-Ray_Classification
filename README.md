@@ -12,14 +12,6 @@ Before running program download the dataset from the link and place the *chest_x
 	git clone https://github.com/prateeksarangi/X-Ray_Classification-CDAC/
 	cd X-Ray_Classification-CDAC
 	
-## Installing MySQL server in the local system to store data of the patients and doctor on the database:
-	sudo apt install mysql-server -y
-	curl -OL https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
-	sudo dpkg -i mysql-apt-config*
-	sudo apt update
-	sudo apt install mysql-server -y
-	sudo mysql_secure_installation
-	
 ## Create and activate virtual environment:
 	pip install virtualenv
 	virtualenv <env_name>
