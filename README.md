@@ -6,7 +6,7 @@ X-Ray classification deals with identifying the disease i.e. pneumonia in a pers
 
 link- https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia/download
 
-Before running program download the dataset from the link and place the *chest_xray* folder, containing *train*, *test* and *val* folders, inside *X-Ray_Classification-CDAC* folder.
+Before running training dataset program download the dataset from the link and place the *chest_xray* folder, containing *train*, *test* and *val* folders, inside *X-Ray_Classification-CDAC* folder.
 
 ## Install process:
 	git clone https://github.com/prateeksarangi/X-Ray_Classification-CDAC/
@@ -23,8 +23,11 @@ Before running program download the dataset from the link and place the *chest_x
 ## Training dataset on local system: 
 	python TunedNN.py
 
-## Running the webapp:-
+## Runnning the prediction model:
+	python ServerSide.py
+
+## Running the webapp:
 	python exec.py
 
-After executing exec.py, open *localhost:5000* in web browser.
+After executing *exec.py*, open *localhost:5000* in web browser.
 
