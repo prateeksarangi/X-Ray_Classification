@@ -26,7 +26,7 @@ Before running program download the dataset from the link and place the *chest_x
 ## Runnning the prediction model:
 	python ServerSide.py
 
-## Running the webapp:-
+## Running the webapp:
 	python exec.py
 
 After executing exec.py, open *localhost:5000* in web browser.
