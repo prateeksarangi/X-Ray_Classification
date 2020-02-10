@@ -227,14 +227,14 @@
                 </div>
                 </div>
             </div>
-           <button type="submit" value="Upload" name="predict" class="txt2">Predict</button>
+           <button type="submit" name="predict" class="txt2">Predict</button>
       
         
    </div>
    </form>
   
        <div class="col-lg-12 col-sm-8 col-xs-6"> 
-         <form method="post" name="annotation">
+         <form method="post" action="/upload">
        <div class="row">
          
             <div class="form-group col-sm-4 col-lg-4" >
@@ -243,7 +243,7 @@
                     <h4 class="heading"> <strong>Annotation</strong><span></span> </h4>
                 </div>
                 <div>
-                    <textarea placeholder="Type here" rows="5" cols="50"></textarea>
+                    <textarea placeholder="Type here" rows="5" cols="50" name="annotation"></textarea>
                 </div>
             </div>
 
