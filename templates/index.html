@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0036)https://s.bootsnipp.com/iframe/xpQyW -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="robots" content="noindex, nofollow">
@@ -154,19 +153,24 @@
                             <h4 class="heading"><strong>Patient </strong> Details <span></span></h4>
                             <div class="form">
                                 {% if pname %}
-                                <input type="text" required="" placeholder="{{ pname }}" value="" name="name" class="txt">
+                                <input type="text" required="" placeholder="{{pname}}" value="" name="name" class="txt">
                                 {% else %}
-                                <input type="text" required="" placeholder="please input patients name" value="" name="name" class="txt">
+                                <input type="text" required="" placeholder="Please input Patient's name" value="" name="name" class="txt">
                                 {% endif %}
                                 {% if gender %}
                                 <input type="text" required="" placeholder="{{gender}}" value="" name="gender" class="txt">
                                 {% else %}
-                                <input type="text" required="" placeholder="Please input patient's Gender" value="" name="gender" class="txt">
+                                <input type="text" required="" placeholder="Please input Patient's gender" value="" name="gender" class="txt">
                                 {% endif %}
                                 {% if age %}
                                 <input type="text" required="" placeholder="{{age}}" value="" name="age" class="txt">
                                 {% else %}
-                                <input type="text" required="" placeholder="Please input patient's Age" value="" name="age" class="txt">
+                                <input type="text" required="" placeholder="Please input Patient's age" value="" name="age" class="txt">
+                                {% endif %}
+                                {% if age %}
+                                <input type="text" required="" placeholder="{{pno}}" value="" name="pno" class="txt">
+                                {% else %}
+                                <input type="text" required="" placeholder="Please input Patient's phone number" value="" name="pno" class="txt">
                                 {% endif %}
                                 
                         </div>
@@ -177,10 +181,21 @@
                     <div class="form_main" style="float: right;">
                             <h4 class="heading"><strong>Doctor </strong> Details <span></span></h4>
                             <div class="form">
-                                <input type="text" required="" placeholder="Please input Doctor's Name" value="" name="name" class="txt">
-                                <input type="text" required="" placeholder="Please input Doctor's mobile No" value="" name="mob" class="txt">
-                                <input type="text" required="" placeholder="Please input Doctor's id" value="" name="id" class="txt">
-                                
+                                {% if dname %}
+                                <input type="text" required="" placeholder="{{dname}}" value="" name="d_name" class="txt">
+                                {% else %}
+                                <input type="text" required="" placeholder="Please input Doctor's name" value="" name="d_name" class="txt">
+                                {% endif %}
+                                {% if did %}
+                                <input type="text" required="" placeholder="{{did}}" value="" name="d_id" class="txt">
+                                {% else %}
+                                <input type="text" required="" placeholder="Please input Doctor's ID" value="" name="d_id" class="txt">
+                                {% endif %}
+                                {% if dno %}
+                                <input type="text" required="" placeholder="{{dno}}" value="" name="d_mob" class="txt">
+                                {% else %}
+                                <input type="text" required="" placeholder="Please input Doctor's mobile number" value="" name="d_mob" class="txt">
+                                {% endif %}
                             </div>
                     </div>
                 </div>
@@ -188,9 +203,7 @@
         </div>
                      
 
-    <div class="col-lg-12 col-sm-8 col-xs-6"> 
-        
-           
+    <div class="col-lg-12 col-sm-8 col-xs-6">
             <div class="row">
                 <div class="form-group col-sm-4 col-lg-4" >
                     <div class="form_main">
@@ -203,6 +216,7 @@
                 <br>
                 <br>
                 <br>
+
                 <div style="float: right;">
                     <img src="{{ image_file }}" width="350" height="350" >
                     <br>
@@ -213,24 +227,23 @@
                 </div>
                 </div>
             </div>
-           <button type="submit" value="Upload" name="predict" class="txt2">Predict</button>
+           <button type="submit" name="predict" class="txt2">Predict</button>
       
         
    </div>
    </form>
   
        <div class="col-lg-12 col-sm-8 col-xs-6"> 
-         <form method="post" name="annotation">
+         <form method="post" action="/upload">
        <div class="row">
          
             <div class="form-group col-sm-4 col-lg-4" >
-            <div class="form_main">
-                <div class="form">
-                <h4 class="heading"> <strong>Annotation</strong><span></span> </h4>
-            </div>
+                <div class="form_main">
+                    <div class="form">
+                    <h4 class="heading"> <strong>Annotation</strong><span></span> </h4>
+                </div>
                 <div>
-
-                    <textarea placeholder="Type here" rows="5" cols="50"></textarea>
+                    <textarea placeholder="Type here" rows="5" cols="50" name="annotation"></textarea>
                 </div>
             </div>
 
