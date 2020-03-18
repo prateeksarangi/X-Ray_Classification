@@ -4,7 +4,7 @@ X-Ray classification deals with identifying the disease i.e. pneumonia in a pers
 
 ## Dataset for project: 
 
-link- https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia/download
+Link- https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia/download
 
 Before running training dataset program download the dataset from the link and place the *chest_xray* folder, containing *train*, *test* and *val* folders, inside *X-Ray_Classification-CDAC* folder.
 
