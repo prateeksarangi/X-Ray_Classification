@@ -12,6 +12,7 @@ def predict_class(path):
     img = image.load_img(path, target_size = (img_width, img_height))
 
     x = image.img_to_array(img)
+    x /= 255
     x = np.expand_dims(x, axis = 0)
 
     images = np.vstack([x])
