@@ -18,7 +18,7 @@ img_width, img_height = 150, 150
 
 train_data_dir = path+'\\chest_xray\\train'
 
-validation_data_dir = path+'\\chest_xray\\val'
+# validation_data_dir = path+'\\chest_xray\\val'
 
 test_data_dir = path+'\\chest_xray\\test'
 
@@ -69,9 +69,9 @@ train_generator = train_datagen.flow_from_directory(
     train_data_dir, target_size=(img_width, img_height),
     batch_size=batch_size, class_mode='binary')
 
-validation_generator = test_datagen.flow_from_directory(
-    validation_data_dir, target_size=(img_width, img_height),
-    batch_size=batch_size, class_mode='binary')
+# validation_generator = test_datagen.flow_from_directory(
+#     validation_data_dir, target_size=(img_width, img_height),
+#     batch_size=batch_size, class_mode='binary')
 
 test_generator = test_datagen.flow_from_directory(
     test_data_dir,
