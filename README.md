@@ -31,3 +31,15 @@ Before running training dataset program download the dataset from the link and p
 
 After executing *exec.py*, open *localhost:5000* in web browser.
 
+# Springer Paper Link
+**SCI-2020 -** https://link.springer.com/chapter/10.1007/978-981-16-1502-3_59
+
+# Reference
+	@incollection{sarangi2021early,
+	  title={Early Detection of Pneumonia from Chest X-Ray Images Using Deep Learning Approach},
+	  author={Sarangi, Prateek and Priyadarshan, Pradosh and Mishra, Swagatika and Rath, Adyasha and Panda, Ganapati},
+	  booktitle={Smart Computing Techniques and Applications},
+	  pages={595--604},
+	  year={2021},
+	  publisher={Springer}
+	}
