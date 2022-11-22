@@ -6,7 +6,7 @@ opencv-python==4.1.2.30
 tqdm==4.36.1
 scipy==1.4.1
 pandas==0.24.2
-Pillow==6.2.0
+Pillow==9.3.0
 flask==1.1.1
 flask_sqlalchemy==2.4.1
 Flask_Cors==3.0.8
